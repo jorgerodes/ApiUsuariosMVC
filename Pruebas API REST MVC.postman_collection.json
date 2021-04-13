@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "f337748a-9631-4fbd-9912-2e47826ecff5",
+		"name": "Pruebas API REST MVC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "listado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9yZ2UiLCJyb2xlIjoiVXN1YXJpbyIsIm5iZiI6MTYxNzQ1MTcwMywiZXhwIjoxNjE3NDUyMzAzLCJpYXQiOjE2MTc0NTE3MDMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzNDEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzQxIn0.C38uy4ugUdyu3mnEIjbdv2wRPQtS0LdCR4757B74P7c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44341/api/user/list",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44341",
+							"path": [
+								"api",
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9yZ2UiLCJyb2xlIjoiVXN1YXJpbyIsIm5iZiI6MTYxNzQ1MTcwMywiZXhwIjoxNjE3NDUyMzAzLCJpYXQiOjE2MTc0NTE3MDMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzNDEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzQxIn0.C38uy4ugUdyu3mnEIjbdv2wRPQtS0LdCR4757B74P7c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44341/api/user/i/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44341",
+							"path": [
+								"api",
+								"user",
+								"i",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transfiere",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9yZ2UiLCJyb2xlIjoiVXN1YXJpbyIsIm5iZiI6MTYxNzQ1MTcwMywiZXhwIjoxNjE3NDUyMzAzLCJpYXQiOjE2MTc0NTE3MDMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzNDEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzQxIn0.C38uy4ugUdyu3mnEIjbdv2wRPQtS0LdCR4757B74P7c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"IdUsuario\": 3,\r\n  \"LoginUsuarioDestino\": \"admin\",\r\n  \"Cantidad\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44341/api/user/transfer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44341",
+							"path": [
+								"api",
+								"user",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Add usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQWRtaW5pc3RyYWRvciIsIm5iZiI6MTYxNzQ1MTc2NCwiZXhwIjoxNjE3NDUyMzY0LCJpYXQiOjE2MTc0NTE3NjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzNDEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzQxIn0.uCiT1b6Ik2WhpCrayZi4GkAHNmlvrXkAlbQm1NLN-T0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Login\": \"jorger\",\r\n  \"Pwd\": \"zgz\",\r\n  \"Balance\": 100,\r\n  \"Administrador\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44341/api/admin/add",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44341",
+							"path": [
+								"api",
+								"admin",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQWRtaW5pc3RyYWRvciIsIm5iZiI6MTYxNzQ1MTc2NCwiZXhwIjoxNjE3NDUyMzY0LCJpYXQiOjE2MTc0NTE3NjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzNDEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzQxIn0.uCiT1b6Ik2WhpCrayZi4GkAHNmlvrXkAlbQm1NLN-T0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Id\": 7,\r\n  \"Login\": \"aaaa\",\r\n  \"Pwd\": \"laura2020\",\r\n  \"Balance\": 6666,\r\n  \"Administrador\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44341/api/admin/update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44341",
+							"path": [
+								"api",
+								"admin",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modbalance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQWRtaW5pc3RyYWRvciIsIm5iZiI6MTYxNzQ1MTc2NCwiZXhwIjoxNjE3NDUyMzY0LCJpYXQiOjE2MTc0NTE3NjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzNDEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzQxIn0.uCiT1b6Ik2WhpCrayZi4GkAHNmlvrXkAlbQm1NLN-T0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Id\": 7,\r\n  \"Login\": \"aaaa\",\r\n  \"Pwd\": \"laura2020\",\r\n  \"Balance\": 6666,\r\n  \"Administrador\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44341/api/admin/ModBalance",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44341",
+							"path": [
+								"api",
+								"admin",
+								"ModBalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQWRtaW5pc3RyYWRvciIsIm5iZiI6MTYxNzQ1MTc2NCwiZXhwIjoxNjE3NDUyMzY0LCJpYXQiOjE2MTc0NTE3NjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzNDEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzQxIn0.uCiT1b6Ik2WhpCrayZi4GkAHNmlvrXkAlbQm1NLN-T0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44341/api/admin/delete/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44341",
+							"path": [
+								"api",
+								"admin",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Username\": \"admin\",\r\n  \"Password\": \"admin1f01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44341/api/login/authenticate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44341",
+					"path": [
+						"api",
+						"login",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
